@@ -51,21 +51,24 @@ public class LoadRoles : MonoBehaviour
 
     public void GetNewRoles() {
 
-        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + str(questions_left));
-        choiceImg.
+        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + questions_left.ToString());
+        choiceImg.active = false;
         questions_left = questions_left - 1;
 
         if (questions_left == 0) {
             ShowEndScreen();
             return;
         }
-        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + str(questions_left));
+        choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + questions_left.ToString());
+        choiceImg.active = true;
+
 
 
     }
 
     public void ShowEndScreen() {
-
+        GameObject endImg = GameObject.Find("EndImage");
+        endImg.active = true;
     }
 
 }
