@@ -14,14 +14,17 @@ public class SwitchScene : MonoBehaviour
     }
 
     public void SwitchToGroup() {
+        Debug.Log("Group\n");
         SceneManager.LoadScene(sceneName:"GroupScreen");
     }
 
     public void SwitchToHome() {
+        Debug.Log("Home\n");
         SceneManager.LoadScene(sceneName:"HomeScreen");
     }
 
     public void SwitchToProfile() {
+        Debug.Log("Profile\n");
         SceneManager.LoadScene(sceneName:"ProfileScreen");
     }
 

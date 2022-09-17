@@ -50,12 +50,16 @@ public class LoadRoles : MonoBehaviour
     }
 
     public void GetNewRoles() {
+
+        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + str(questions_left));
+        choiceImg.
+        questions_left = questions_left - 1;
+
         if (questions_left == 0) {
             ShowEndScreen();
             return;
         }
-        questions_left = questions_left - 1;
-
+        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + str(questions_left));
 
 
     }
