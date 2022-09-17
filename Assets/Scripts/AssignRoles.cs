@@ -9,6 +9,9 @@ public class AssignRoles : MonoBehaviour
     public int friend = -1;
     public int role = -1;
 
+    List<int> pairs = new List<int>(); // pairs [friend] = role;
+
+
     public Button role1;
     public Button role2;
     public Button role3;
@@ -54,6 +57,8 @@ public class AssignRoles : MonoBehaviour
         friend4.onClick.AddListener(delegate{SelectFriend(4);});
         friend5.onClick.AddListener(delegate{SelectFriend(5);});
 
+         for (int i = 0; i < 5; i++)
+            pairs.Add(0);
     }
 
     // Update is called once per frame
@@ -62,25 +67,47 @@ public class AssignRoles : MonoBehaviour
         
     }
 
+    bool CheckAllAssigned() {
+        for (int i = 0; i < 5; i++) {
+            if (pairs[i] == 0) return false;
+        }
+        return true;
+    }
+
     public void SelectRole(int rolenum) {
         Debug.Log("Role Selected");
-
+        role = rolenum;
         if (friend == -1) {
             return;
         }
         else if (friend != -1 && role != -1) {
-            GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(friend, rolenum);
-            friend = -1;
-            role = -1;
-            GameObject.Find("RoleManager").GetComponent<LoadRoles>().GetNewRoles();
+            // check all people assigned
+            pairs[friend] = role; 
+            if (CheckAllAssigned)
+                AllRolesSelected();
         }
 
+    }
+
+    public void AllRolesSelected() {
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(1, pairs[1]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(2, pairs[2]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(3, pairs[3]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(4, pairs[4]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(5, pairs[5]);
+
+        friend = -1;
+        role = -1;
+        for (int i = 0; i < 5; i++) {
+            pairs[i] = 0;
+        }
+
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().GetNewRoles();
     }
 
     public void SelectFriend(int friendnum) {
         friend = friendnum;
         Debug.Log("Friend Selected");
     }
-
 
 }
