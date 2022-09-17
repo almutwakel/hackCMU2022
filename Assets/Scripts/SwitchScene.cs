@@ -8,17 +8,20 @@ public class SwitchScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {    
+        
+        // GameObject.Find("Group1Button").onClick.AddListener(SwitchToGroup);
+        // GameObject.Find("ProfileButton").onClick.AddListener(SwitchTo);
     }
 
-    void SwitchToGroup() {
+    public void SwitchToGroup() {
         SceneManager.LoadScene(sceneName:"GroupScreen");
     }
 
-    void SwitchToHome() {
+    public void SwitchToHome() {
         SceneManager.LoadScene(sceneName:"HomeScreen");
     }
 
-    void SwitchToProfile() {
+    public void SwitchToProfile() {
         SceneManager.LoadScene(sceneName:"ProfileScreen");
     }
 
