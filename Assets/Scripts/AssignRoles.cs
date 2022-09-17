@@ -82,7 +82,7 @@ public class AssignRoles : MonoBehaviour
         }
         else if (friend != -1 && role != -1) {
             // check all people assigned
-            pairs[friend] = role; 
+            pairs[friend - 1] = role; 
             if (CheckAllAssigned())
                 AllRolesSelected();
         }
@@ -90,11 +90,11 @@ public class AssignRoles : MonoBehaviour
     }
 
     public void AllRolesSelected() {
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(1, pairs[1]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(2, pairs[2]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(3, pairs[3]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(4, pairs[4]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(5, pairs[5]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(1, pairs[0]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(2, pairs[1]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(3, pairs[2]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(4, pairs[3]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(5, pairs[4]);
 
         friend = -1;
         role = -1;
