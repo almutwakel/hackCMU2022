@@ -494,7 +494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &301739675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896497599}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16820934, g: 0.16994993, b: 0.7924528, a: 1}
+  m_Color: {r: 0.74211544, g: 0.7921569, b: 0.16862743, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2347,7 +2347,7 @@ RectTransform:
   m_Children:
   - {fileID: 1792377760}
   m_Father: {fileID: 1896497599}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2651,6 +2651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5002c22028c764d53ae0ac4addc8aa7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choiceImg1: {fileID: 946577391}
+  choiceImg2: {fileID: 952690242}
+  choiceImg3: {fileID: 382459341}
+  endImg: {fileID: 0}
   questions_left: 3
 --- !u!1 &1374563780
 GameObject:
@@ -3886,8 +3890,8 @@ RectTransform:
   - {fileID: 1167847571}
   - {fileID: 1971271808}
   - {fileID: 1382629515}
-  - {fileID: 1155834769}
   - {fileID: 301739675}
+  - {fileID: 1155834769}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

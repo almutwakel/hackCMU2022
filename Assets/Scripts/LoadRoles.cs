@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class LoadRoles : MonoBehaviour
 {
 
+    public GameObject choiceImg1;
+    public GameObject choiceImg2;
+    public GameObject choiceImg3;
+    public GameObject endImg;
+
     public int questions_left = 3;
 
     List<int> role1 = new List<int>();
@@ -22,7 +27,6 @@ public class LoadRoles : MonoBehaviour
 
     public List<List<int>> friends = new List<List<int>>();
 
-    List<GameObject> friendImages = new List<GameObject>();
     List<GameObject> questionImages = new List<GameObject>();
 
 
@@ -34,7 +38,9 @@ public class LoadRoles : MonoBehaviour
         friends.Add(friend3);
         friends.Add(friend4);
         friends.Add(friend5);
-
+        questionImages.Add(choiceImg1);
+        questionImages.Add(choiceImg2);
+        questionImages.Add(choiceImg3);
 
 
     }
@@ -51,7 +57,8 @@ public class LoadRoles : MonoBehaviour
 
     public void GetNewRoles() {
 
-        GameObject choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + questions_left.ToString());
+
+        GameObject choiceImg = questionImages[questions_left - 1];
         choiceImg.active = false;
         questions_left = questions_left - 1;
 
@@ -59,7 +66,7 @@ public class LoadRoles : MonoBehaviour
             ShowEndScreen();
             return;
         }
-        choiceImg = GameObject.Find("ChoiceSelectionBackgroundImage" + questions_left.ToString());
+        choiceImg = questionImages[questions_left - 1];
         choiceImg.active = true;
 
 
@@ -67,7 +74,7 @@ public class LoadRoles : MonoBehaviour
     }
 
     public void ShowEndScreen() {
-        GameObject endImg = GameObject.Find("EndImage");
+        
         endImg.active = true;
     }
 
