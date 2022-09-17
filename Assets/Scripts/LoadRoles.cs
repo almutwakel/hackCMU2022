@@ -20,8 +20,10 @@ public class LoadRoles : MonoBehaviour
     List<int> friend4 = new List<int>();
     List<int> friend5 = new List<int>();
 
-    public List<List> friends = new List<List>();
+    public List<List<int>> friends = new List<List<int>>();
 
+    List<GameObject> friendImages = new List<GameObject>();
+    List<GameObject> questionImages = new List<GameObject>();
 
 
     // Start is called before the first frame update
@@ -32,6 +34,8 @@ public class LoadRoles : MonoBehaviour
         friends.Add(friend3);
         friends.Add(friend4);
         friends.Add(friend5);
+
+
 
     }
 

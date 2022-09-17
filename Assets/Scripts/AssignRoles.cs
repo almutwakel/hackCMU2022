@@ -67,7 +67,7 @@ public class AssignRoles : MonoBehaviour
         
     }
 
-    bool CheckAllAssigned() {
+    public bool CheckAllAssigned() {
         for (int i = 0; i < 5; i++) {
             if (pairs[i] == 0) return false;
         }
@@ -83,7 +83,7 @@ public class AssignRoles : MonoBehaviour
         else if (friend != -1 && role != -1) {
             // check all people assigned
             pairs[friend] = role; 
-            if (CheckAllAssigned)
+            if (CheckAllAssigned())
                 AllRolesSelected();
         }
 
