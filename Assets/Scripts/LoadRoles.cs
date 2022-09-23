@@ -11,7 +11,7 @@ public class LoadRoles : MonoBehaviour
     public GameObject choiceImg3;
     public GameObject endImg;
 
-    public int questions_left = 3;
+    public int questions_left = 1;
 
     List<int> role1 = new List<int>();
     List<int> role2 = new List<int>();

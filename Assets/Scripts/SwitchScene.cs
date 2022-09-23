@@ -15,7 +15,7 @@ public class SwitchScene : MonoBehaviour
 
     public void SwitchToGroup() {
         Debug.Log("Group\n");
-        SceneManager.LoadScene(sceneName:"GroupScreen");
+        SceneManager.LoadScene(sceneName:"GroupScene2");
     }
 
     public void SwitchToHome() {

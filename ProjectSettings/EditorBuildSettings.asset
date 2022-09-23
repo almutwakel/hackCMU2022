@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProfileScreen.unity
     guid: c4f070755c455459a9b1f8ba511c6535
+  - enabled: 1
+    path: Assets/Scenes/GroupScene2.unity
+    guid: 7af1d7334339cf34186c7ac9c27f49d9
   m_configObjects: {}

@@ -26,17 +26,17 @@ public class AssignRoles : MonoBehaviour
 
     void Awake() {
 
-        role1 = GameObject.Find("Choice1").GetComponent<Button>();
-        role2 = GameObject.Find("Choice2").GetComponent<Button>();
-        role3 = GameObject.Find("Choice3").GetComponent<Button>();
-        role4 = GameObject.Find("Choice4").GetComponent<Button>();
-        role5 = GameObject.Find("Choice5").GetComponent<Button>();
+        // role1 = GameObject.Find("Choice1").GetComponent<Button>();
+        // role2 = GameObject.Find("Choice2").GetComponent<Button>();
+        // role3 = GameObject.Find("Choice3").GetComponent<Button>();
+        // role4 = GameObject.Find("Choice4").GetComponent<Button>();
+        // role5 = GameObject.Find("Choice5").GetComponent<Button>();
 
-        friend1 = GameObject.Find("Choice1f").GetComponent<Button>();
-        friend2 = GameObject.Find("Choice2f").GetComponent<Button>();
-        friend3 = GameObject.Find("Choice3f").GetComponent<Button>();
-        friend4 = GameObject.Find("Choice4f").GetComponent<Button>();
-        friend5 = GameObject.Find("Choice5f").GetComponent<Button>();
+        // friend1 = GameObject.Find("Choice1f").GetComponent<Button>();
+        // friend2 = GameObject.Find("Choice2f").GetComponent<Button>();
+        // friend3 = GameObject.Find("Choice3f").GetComponent<Button>();
+        // friend4 = GameObject.Find("Choice4f").GetComponent<Button>();
+        // friend5 = GameObject.Find("Choice5f").GetComponent<Button>();
 
     }
 
@@ -45,17 +45,17 @@ public class AssignRoles : MonoBehaviour
     void Start()
     {
         
-        role1.onClick.AddListener(delegate{SelectRole(1);});
-        role2.onClick.AddListener(delegate{SelectRole(2);});
-        role3.onClick.AddListener(delegate{SelectRole(3);});
-        role4.onClick.AddListener(delegate{SelectRole(4);});
-        role5.onClick.AddListener(delegate{SelectRole(5);});
+        // role1.onClick.AddListener(delegate{SelectRole(1);});
+        // role2.onClick.AddListener(delegate{SelectRole(2);});
+        // role3.onClick.AddListener(delegate{SelectRole(3);});
+        // role4.onClick.AddListener(delegate{SelectRole(4);});
+        // role5.onClick.AddListener(delegate{SelectRole(5);});
 
-        friend1.onClick.AddListener(delegate{SelectFriend(1);});
-        friend2.onClick.AddListener(delegate{SelectFriend(2);});
-        friend3.onClick.AddListener(delegate{SelectFriend(3);});
-        friend4.onClick.AddListener(delegate{SelectFriend(4);});
-        friend5.onClick.AddListener(delegate{SelectFriend(5);});
+        // friend1.onClick.AddListener(delegate{SelectFriend(1);});
+        // friend2.onClick.AddListener(delegate{SelectFriend(2);});
+        // friend3.onClick.AddListener(delegate{SelectFriend(3);});
+        // friend4.onClick.AddListener(delegate{SelectFriend(4);});
+        // friend5.onClick.AddListener(delegate{SelectFriend(5);});
 
          for (int i = 0; i < 5; i++)
             pairs.Add(0);
@@ -90,11 +90,11 @@ public class AssignRoles : MonoBehaviour
     }
 
     public void AllRolesSelected() {
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(1, pairs[0]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(2, pairs[1]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(3, pairs[2]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(4, pairs[3]);
-        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(5, pairs[4]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(1, pairs[1]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(2, pairs[2]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(3, pairs[3]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(4, pairs[4]);
+        GameObject.Find("RoleManager").GetComponent<LoadRoles>().SaveMatchData(5, pairs[5]);
 
         friend = -1;
         role = -1;
